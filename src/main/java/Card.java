@@ -13,7 +13,9 @@ public class Card {
     }
 
     public Rank getRank(){
-        return this.rank;
+        return this.rank.;
     }
+
+
 
 }
