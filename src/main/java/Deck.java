@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Deck {
 
@@ -75,8 +77,23 @@ public class Deck {
         }
     }
 
+    public ArrayList<Card> returnDeck(){
+        return this.cards;
+    }
+
+
+    public static int random_int(int Min, int Max)
+    {
+        return (int) (Math.random()*(Max-Min))+Min;
+    }
+
     public void shuffleDeck(){
-        
+        Collections.shuffle(this.cards);
+
+    }
+
+    public Card dealCard(){
+        return this.cards.remove(0);
     }
 
 }
